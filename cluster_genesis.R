@@ -3,6 +3,7 @@
 # Author: Matthew Shane Loop
 
 cluster_genesis <- function(cases_ppp, q, v, sigma){
+  if(q == 0) {return(cases_ppp)} else {
   library(spatstat)
   clusters <- ppp()
   for(i in 1:(cases_ppp$n*q)){
@@ -12,4 +13,5 @@ cluster_genesis <- function(cases_ppp, q, v, sigma){
   }
   new_cases <- superimpose(clusters, cases_ppp[-c(1:(cases_ppp$n*q*v))])
   return(new_cases)
+  }
 }
