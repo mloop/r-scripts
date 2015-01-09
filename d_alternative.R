@@ -3,6 +3,6 @@
 # Author: Matthew Shane Loop
 
 d_alternative <- function(h, n, q, v, sigma){
- d <- v*(v - 1)*q/n*(1 - exp(-(h^2)/(4*sigma)^2))
+ d <- v*(v - 1)*q/n*(1 - exp(-(h^2)/(4*sigma^2)))
  return(d)
 }
