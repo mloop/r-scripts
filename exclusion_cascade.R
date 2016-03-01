@@ -1,5 +1,10 @@
 # Purpose: to create an "exclusion cascade" dataset for epidemiology analyses
 
+# The user provides a source dataset, criteria listed as logical conditions to the dplyr filter() argument (e.g., "bmi < 30"), and reasons
+# that explain each criterion in more detail (e.g., "Exclude those with BMI of 30 or greater").
+
+# The function produces a tidy dataset with the exclusion cascade, not the analysis dataset with criteria applied.
+
 # Author: Matthew Shane Loop
 
 exclusion_cascade <- function(source_dataset, criteria, reason){
